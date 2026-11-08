@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shop Juli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Thanh trên cùng: logo, ô tìm kiếm, nút giỏ hàng -->
+  <header>
+    <div class="bar">
+      <div class="logo">🛍️ Shop Juli</div>
+      <input id="q" class="search" type="search" placeholder="Tìm sản phẩm…" aria-label="Tìm sản phẩm">
+      <button class="cartbtn" id="open">Giỏ hàng (<span id="cnt">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- Nội dung chính -->
+  <main>
+    <section class="hero">
+      <h1>Mua sắm dễ dàng</h1>
+      <p>Chọn món bạn thích, thêm vào giỏ và thanh toán trong vài bước.</p>
+    </section>
+    <div class="cats" id="cats"></div>   <!-- các nút danh mục (app.js tự vẽ) -->
+    <div class="grid" id="grid"></div>   <!-- lưới sản phẩm (app.js tự vẽ) -->
+  </main>
+
+  <!-- Giỏ hàng trượt từ bên phải -->
+  <div id="veil"></div>
+  <aside id="drawer" aria-label="Giỏ hàng">
+    <div class="dh">
+      <span>Giỏ hàng của bạn</span>
+      <button class="x" id="close" aria-label="Đóng">×</button>
+    </div>
+    <div class="items" id="items"></div>
+    <div class="foot">
+      <div class="total"><span>Tổng cộng</span><span id="total">0 ₫</span></div>
+      <button class="pay" id="pay">Đặt hàng</button>
+    </div>
+  </aside>
+
+  <div id="toast"></div>  <!-- thông báo nhỏ ở cuối màn hình -->
+
+  <!-- Thứ tự quan trọng: data.js trước, app.js sau -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
